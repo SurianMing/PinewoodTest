@@ -1,0 +1,6 @@
+@PinewoodTest.CustomerService_HostAddress = http://localhost:5169
+
+GET {{PinewoodTest.CustomerService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,8 @@
+PUT http://localhost:5169/api/customer HTTP/1.1
+content-type: application/json
+
+{
+    "id": "267f5ae7-cc7a-4e0b-bdc4-dd91d68a1cdc",
+    "name": "Test Customer",
+    "isActive": true
+}

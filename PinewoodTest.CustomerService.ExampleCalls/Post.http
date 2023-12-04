@@ -1,0 +1,9 @@
+POST http://localhost:5169/api/customer HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Test Customer",
+    "isActive": true
+}
+
+Matt 01926 354557
