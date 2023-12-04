@@ -22,7 +22,7 @@ public class CustomerController(
             .Select(dto => new Customer(dto));
     }
 
-    [HttpGet("/{id}")]
+    [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [InvalidDataExceptionFilter]

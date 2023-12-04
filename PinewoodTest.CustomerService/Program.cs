@@ -44,24 +44,11 @@ app.MapControllers();
 
 // app.UseHttpsRedirection();
 
-var summaries = new[]
+app.MapGet("/heartbeat", () =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherForecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new
-        {
-            When = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Where = Random.Shared.Next(-20, 55),
-            Which = summaries[Random.Shared.Next(summaries.Length)]
-        })
-        .ToArray();
-    return forecast;
+    return "Running....";
 })
-.WithName("GetWeatherForecast")
+.WithName("GetHeartbeat")
 .WithOpenApi();
 
 app.Run();
